@@ -1,7 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
-
   modules: [
     // ...
     [
@@ -10,6 +8,6 @@ export default defineNuxtConfig({
         autoImports: ["defineStore"],
       },
     ],
-    ["@nuxt/ui"],
+    ["@nuxt/ui", {}],
   ],
 });
