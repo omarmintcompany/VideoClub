@@ -1,4 +1,10 @@
+<!-- pages/index.vue -->
 <template>
-  <div>Home Page</div>
+  <div>
+    <MovieSearch />
+  </div>
 </template>
-<script lang="ts" setup></script>
+
+<script setup>
+import MovieSearch from "~/components/MovieSearch.vue";
+</script>
