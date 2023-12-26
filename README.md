@@ -1,75 +1,52 @@
-# Nuxt 3 Minimal Starter
+# VideoClub App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Una aplicación Vue.js con Nuxt que utiliza la API DummyJSON para realizar peticiones dummy de login. La aplicación consta de 4 páginas: inicio, login, búsqueda de películas y detalles de película.
+Páginas
 
-## Setup
+    Inicio:
+        Muestra un logo representativo de la aplicación.
 
-Make sure to install the dependencies:
+    Login:
+        Permite iniciar sesión en el sistema mediante peticiones a la API de DummyJSON.
 
-```bash
-# npm
-npm install
+    Búsqueda de Películas:
+        Muestra un listado de películas basado en la búsqueda por título.
 
-# pnpm
-pnpm install
+    Detalles de Película:
+        Muestra información detallada sobre una película específica.
 
-# yarn
-yarn install
+Funcionalidades
 
-# bun
-bun install
-```
+    Uso de un middleware para verificar el estado de inicio de sesión en todo momento.
+    Utiliza Vuex para el manejo del estado global.
+    Se ha dockerizado la solución para un despliegue sencillo.
 
-## Development Server
+Instalación
 
-Start the development server on `http://localhost:3000`:
+    Clona el repositorio:
 
-```bash
-# npm
-npm run dev
+    bash
 
-# pnpm
-pnpm run dev
+git clone https://github.com/omarmintcompany/VideoClub.git
 
-# yarn
-yarn dev
+Navega al directorio del proyecto:
 
-# bun
-bun run dev
-```
+bash
 
-## Production
+cd VideoClub
 
-Build the application for production:
+Construye la imagen Docker:
 
-```bash
-# npm
-npm run build
+bash
 
-# pnpm
-pnpm run build
+docker build -t videoclub .
 
-# yarn
-yarn build
+Ejecuta el contenedor Docker:
 
-# bun
-bun run build
-```
+bash
 
-Locally preview production build:
+docker run -p 3000:3000 videoclub
 
-```bash
-# npm
-npm run preview
+Accede a la aplicación en tu navegador:
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+http://localhost:3000
