@@ -1,4 +1,3 @@
-<!-- pages/index.vue -->
 <template>
   <MovieSearch />
 </template>

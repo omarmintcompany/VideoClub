@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="title">
-      <h2>Login</h2>
-    </div>
     <div class="container form">
       <label for="uname"><b>Username</b></label>
       <input
@@ -32,9 +29,9 @@
 import { storeToRefs } from "pinia";
 import { useAuthStore } from "~/store/auth";
 
-const { authenticateUser } = useAuthStore(); // use auth store
+const { authenticateUser } = useAuthStore();
 
-const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive
+const { authenticated } = storeToRefs(useAuthStore()); 
 
 const user = ref({
   username: "kminchelle",
@@ -44,7 +41,6 @@ const router = useRouter();
 
 const login = async () => {
   await authenticateUser(user.value);
-  // redirect to homepage if user is authenticated
   if (authenticated) {
     router.push("/");
   }
